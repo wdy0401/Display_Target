@@ -17,16 +17,16 @@ int main(int argc, char *argv[])
 
     mw=&w;
 
-    listen_stdin *ls=new listen_stdin;
+    listen_stdin *ls=new listen_stdin();
     ls->set_mw(&w);
+
     ls->init();
     ls->start();
 
-    q_button *qb=new q_button();
-    qb->init("aaa\n"+QDateTime::currentDateTime().toString("hh:mm:ss").toStdString());
+//    q_button *qb=new q_button();
+//    qb->init("aaa\n"+QDateTime::currentDateTime().toString("hh:mm:ss").toStdString());
 
-    //emit this->add_button(qb);
-    mw->add_button(qb);
+//    mw->add_button(qb);
 
 
     return a.exec();

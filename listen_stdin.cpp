@@ -2,23 +2,16 @@
 
 using namespace std;
 
-extern MainWindow * mw;
 listen_stdin::listen_stdin()
 {
 }
 void listen_stdin::init()
 {
-    _work_t=new work_t;
-
+    QObject::connect(this,&listen_stdin::add_button,_mw,&MainWindow::add_button);
 }
 void listen_stdin::run()
 {
 
-    QObject::connect(_work_t,&work_t::add_button,_mw,&MainWindow::add_button);
-    _work_t->w1();
-}
-void work_t::w1()
-{
     map<string,string> ctr_msg;
     map<string,q_button*> ctr_button;
 
@@ -61,7 +54,7 @@ void work_t::w1()
             ctr_msg[ctr]=msg;
 
             //emit this->add_button(qb);
-            mw->add_button(qb);
+            emit this->add_button(qb);
             cerr << "4\t"  << tp << endl;
         }
         cerr << "5\t"  << tp << endl;
