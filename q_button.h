@@ -13,6 +13,7 @@ public:
     explicit q_button(QObject *parent = 0);
     void init(const std::string & ,int);
     void init(const std::string &);
+    void change_message(const std::string & msg);
 
 public slots:
     void change_status(int);

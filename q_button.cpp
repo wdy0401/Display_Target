@@ -42,6 +42,12 @@ void q_button::change_status(int status)
     this->setStyleSheet(color_type.c_str());
 }
 
+void q_button::change_message(const string & msg)
+{
+    this->setText(msg.c_str());
+    _message=msg;
+}
+
 void q_button::mouseDoubleClickEvent(QMouseEvent *event)
 {
     change_status(2);

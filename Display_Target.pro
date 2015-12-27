@@ -14,9 +14,13 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    q_button.cpp
+    q_button.cpp \
+    ../gpp_qt/wfunction/wfunction.cpp \
+    listen_stdin.cpp
 
 HEADERS  += mainwindow.h \
-    q_button.h
+    q_button.h \
+    ../gpp_qt/wfunction/wfunction.h \
+    listen_stdin.h
 
 FORMS    += mainwindow.ui
