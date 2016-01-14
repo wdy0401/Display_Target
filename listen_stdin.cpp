@@ -48,7 +48,7 @@ void listen_stdin::run()
         }
         else
         {
-            q_button *qb=new q_button();
+            qb=new q_button();
             qb->init(msg+"\n"+QDateTime::currentDateTime().toString("hh:mm:ss").toStdString());
             ctr_button[ctr]=qb;
             ctr_msg[ctr]=msg;
